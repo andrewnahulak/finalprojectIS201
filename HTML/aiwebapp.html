@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <a class="linkref" href="../index.html"> Resume | </a>
+    <a class="linkref" href="aiwebapp.html"> AI Game | </a>
+    <a class="linkref" href="tableau.html"> Tableau | </a>
+    <a class="linkref" href="scratch.html"> Scratch Page </a>
+    <link href="../css/customcss.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(169, 135, 83);
+            text-decoration: underline;
+        }
+        .container {
+            text-align: center;
+        }
+        .joke {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        .button {
+            background-color: #565656;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <style></style>
+    <div class="container">
+        <h1>Joke Generator </h1>
+        <p>Click this is if you're a Dad:</p>
+        <button class="button" onclick="generateJoke()">  Kill Me</button>
+        <div class="joke" id="jokeDisplay"></div>
+    </div>
+
+    <script>
+        const jokes = [
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "I told my computer I needed a break, and now it won't stop sending me Kit-Kats.",
+            "Why don't eggs tell jokes? They'd crack each other up!",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call fake spaghetti? An impasta!",
+            "Why did the cup go to the bathroom? He couldn't hold his water!",
+            "Girl, you're so hot, you remind me of the 20 letters of the Alphabet! In fact, you made me forget U R A Q T!",
+            "What's a recycling bin's' least favorite subject at school? Litter-ature!",
+            "sheesh, how many times have you clicked this? You really do want to die",
+            "Are you a toilet? Because you're full of crap!",
+            "What do you call this IS 201 project? An A+!"
+        ];
+
+        function generateJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            const joke = jokes[randomIndex];
+            document.getElementById("jokeDisplay").innerText = joke;
+        }
+    </script>
+    <img class="imagefixer" src="../Images/dadjoke.webp" alt="git that reads, wow thats so funny the last time i heard thati fell 
+    off my dinosaur" />
+</body>
+</html>
